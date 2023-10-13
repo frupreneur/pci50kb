@@ -1,0 +1,75 @@
+---
+import * as hi from "react-icons/hi";
+import * as tfi from "react-icons/tfi";
+import * as io from "react-icons/io";
+import { menu } from "../../db";
+
+const  { HiMenuAlt3 } = hi
+const { TfiClose }  = tfi
+const { IoIosImages } = io
+
+
+---
+
+<header >
+    <nav id="nav">
+        <ul id="menus">
+          <li class="logo">
+            <a href="/">
+              <span class="logoSpan text-2xl px ">
+                <IoIosImages /> Photo Convert Into 50 kb
+              </span>
+            </a>
+          </li>
+          <li
+            class="menu-icon close"
+            
+          >
+            <HiMenuAlt3 className=" icons fa-solid fa-bars" />
+            <TfiClose className="icons fa-solid fa-bars hidden" />
+        </li>
+       
+            <ul class={`secondary offEl`}>
+              {menu.map((menuItem, i) => (
+                <li >
+                  <a
+                    href={menuItem.path}
+                  >
+                    {menuItem.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+     
+        </ul>
+      </nav>
+
+</header>
+
+<script>
+    const logo = document.querySelector('li.logo');
+    const menuIcons = document.querySelectorAll('.icons')
+    const seconfaryMenu = document.querySelector(".secondary")
+    
+    menuIcons?.forEach(x=>{
+            x.addEventListener('click', () =>{
+              console.log("clicked")
+            menuIcons.forEach(menuIcon => {
+               if( menuIcon.classList.contains("hidden") ){
+                menuIcon.classList.remove("hidden") 
+                document.documentElement.style.cssText =
+                  "overflow: hidden !important";
+               }else{
+                menuIcon.classList.add("hidden")
+                document.documentElement.style.cssText =
+                  "overflow: null !important";
+                
+               }
+
+            menuIcons[1].classList.contains("hidden") ? seconfaryMenu?.classList.add("offEl") :seconfaryMenu?.classList.remove("offEl") 
+        })
+    })
+})
+
+
+</script>

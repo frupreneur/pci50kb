@@ -1,0 +1,34 @@
+---
+import { footerMenu } from "../../db";
+
+---
+
+<footer>
+  <div class="footer">
+    {/* <div class="footerHeader">
+      <ul class="footer-menu">
+        {menu.slice(0, 4).map((menuItem, i) => (
+          <li key={i}>
+            <Link href={menuItem.path}>{menuItem.name}</Link>
+          </li>
+        ))}
+      </ul>
+    </div> */}
+    <ul class="footer-menu">
+      {footerMenu.map((menuItem, i) => (
+        <li>
+          <a
+            href={menuItem.path}
+            target={menuItem.name === "Site Map" ? "_blank" : ""}
+          >
+            {menuItem.name}
+          </a>
+        </li>
+      ))}
+    </ul>
+    <p>
+      {`All rights reserved © Photo Convert Into 50KB ${new Date().getFullYear()}`}{" "}
+    </p>
+  </div>
+</footer>
+
