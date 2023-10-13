@@ -1,13 +1,12 @@
-"use client";
 import React, { useState } from "react";
-import * as dropZone from "react-dropzone";
+import { useDropzone } from "react-dropzone";
 import { handleCompression } from "../../utils";
-import * as ai from "react-icons/ai";
+import { AiOutlineLoading } from "react-icons/ai";
 import Select from "react-select";
 
-const { useDropzone } = dropZone;
+// const { useDropzone } = dropZone;
 
-const { AiOutlineLoading } = ai;
+// const { AiOutlineLoading } = ai;
 
 interface File extends Blob {
   readonly lastModified: number;
