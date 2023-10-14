@@ -124,7 +124,7 @@ export default function ImageUpload() {
         }`}
       >
         {!converting ? (
-          "Select an Image"
+          "Click HERE to Select Image"
         ) : (
           <div className="w-full flex justify-center items-center gap-2 text-center ">
             {/* <div>
