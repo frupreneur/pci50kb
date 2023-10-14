@@ -1,6 +1,6 @@
 {
-  "name": "",
   "type": "module",
+  "name": "pci50kb",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
