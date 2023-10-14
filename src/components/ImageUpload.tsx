@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { useDropzone } from "react-dropzone";
+import * as dropZone from "react-dropzone";
 import { handleCompression } from "../../utils";
 // import ai from "react-icons/ai";
 import Select from "react-select";
 
 // const { AiOutlineLoading } = ai;
+const { useDropzone } = dropZone;
 
 interface File extends Blob {
   readonly lastModified: number;
