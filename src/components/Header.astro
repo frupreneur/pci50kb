@@ -1,12 +1,12 @@
 ---
-import hi from "react-icons/hi";
-import tfi from "react-icons/tfi";
-import io from "react-icons/io";
+// import hi from "react-icons/hi";
+// import tfi from "react-icons/tfi";
+// import io from "react-icons/io";
 import { menu } from "../../db";
 
-const  { HiMenuAlt3 } = hi
-const { TfiClose }  = tfi
-const { IoIosImages } = io
+// const  { HiMenuAlt3 } = hi
+// const { TfiClose }  = tfi
+// const { IoIosImages } = io
 
 
 ---
@@ -17,7 +17,8 @@ const { IoIosImages } = io
           <li class="logo">
             <a href="/">
               <span class="logoSpan text-2xl px ">
-                <IoIosImages /> Photo Convert Into 50 kb
+                <!-- <IoIosImages /> -->
+                Photo Convert Into 50 kb
               </span>
             </a>
           </li>
@@ -25,8 +26,14 @@ const { IoIosImages } = io
             class="menu-icon close"
             
           >
-            <HiMenuAlt3 className=" icons fa-solid fa-bars" />
-            <TfiClose className="icons fa-solid fa-bars hidden" />
+          <span class="icons flex gap-1 rotate-90 h-9">
+            <span class="-[100%]">|</span>
+            <span class="h-[100%">|</span>
+            <span class="h-[100%">|</span>
+          </span>
+          <span class="icons hidden">CLOSE</span>
+            <!-- <HiMenuAlt3 className=" icons fa-solid fa-bars" />
+            <TfiClose className="icons fa-solid fa-bars hidden" /> -->
         </li>
        
             <ul class={`secondary offEl`}>
