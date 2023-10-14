@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
-// import ImageUpload from '../components/ImageUpload';
+import ImageUpload from '../components/ImageUpload';
 import firstImage from "../../public/assets/image_compress_photo_into_50kb.jpg";
 import secondImage from "../../public/assets/compressedJPEG-COMPRESSION1-Minion-Pro.jpg";
 
@@ -22,7 +22,7 @@ const posts = allPosts.sort((a,b) =>  b.frontmatter.publishDate - a.frontmatter.
       <p class="intro ">
         Free photo convert into 50 KB and as low as 20 KB to 50 KB JPG. Achieve quick and easy photo 50KB convert and image convert into 50 KB with our 50kb photo converter<br />
       </p>
-      <!-- <ImageUpload client:load /> -->
+      <ImageUpload client:load />
       <div style={{ textAlign:  "left" }}>
         <h2>Photo Conversion to 50 KB: Why You Should Opt for Smaller Files</h2>
 
