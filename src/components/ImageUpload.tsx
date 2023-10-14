@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useDropzone } from "react-dropzone";
 import { handleCompression } from "../../utils";
-import ai from "react-icons/ai";
+// import ai from "react-icons/ai";
 import Select from "react-select";
 
-const { AiOutlineLoading } = ai;
+// const { AiOutlineLoading } = ai;
 
 interface File extends Blob {
   readonly lastModified: number;
@@ -126,9 +126,9 @@ export default function ImageUpload() {
           "Select an Image"
         ) : (
           <div className="w-full flex justify-center items-center gap-2 text-center ">
-            <div>
+            {/* <div>
               <AiOutlineLoading className="mx-auto animate-spin " />
-            </div>
+            </div> */}
             <div className="">Converting. Please Wait...</div>
           </div>
         )}
