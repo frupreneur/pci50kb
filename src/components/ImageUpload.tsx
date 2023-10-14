@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import { useDropzone } from "react-dropzone";
+// import * as dropZone from "react-dropzone";
 import { handleCompression } from "../../utils";
 // import ai from "react-icons/ai";
 import Select from "react-select";
 
+// const { AiOutlineLoading } = ai;
+// const { useDropzone } = dropZone;
 
 interface File extends Blob {
   readonly lastModified: number;
@@ -34,7 +36,7 @@ export default function ImageUpload() {
     setConverting(true);
     setFiles([...acceptedFiles]);
   }, []);
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
+  // const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
 
   const handleDownload = () => {
     if (preview) {
@@ -92,18 +94,18 @@ export default function ImageUpload() {
           />
         </label>
       </div>
-      <div
+      {/* <div
         className="flex w-full h-[150px] justify-center items-center border-dashed border-2 border-sky-500 my-5 "
-        {...getRootProps()}
-        style={{ backgroundColor: isDragActive ? "#FFFAFA" : "" }}
-      >
-        <input {...getInputProps()} />
-        {isDragActive ? (
-          <p>Drop the files here ...</p>
-        ) : (
-          <p>{`Drag 'n' drop Image here`}</p>
-        )}
-      </div>
+      //   {...getRootProps()}
+      //   style={{ backgroundColor: isDragActive ? "#FFFAFA" : "" }}
+      // >
+      //   <input {...getInputProps()} />
+      //   {isDragActive ? (
+      //     <p>Drop the files here ...</p>
+      //   ) : (
+      //     <p>{`Drag 'n' drop Image here`}</p>
+      //   )} */}
+      {/* </div> */}
       <input
         type="file"
         name="nameFOR"
@@ -114,7 +116,7 @@ export default function ImageUpload() {
           setFiles([event.target.files[0]]);
         }}
       />
-      <p>OR</p>
+      {/* <p>OR</p> */}
       <label
         htmlFor={`${converting ? "" : "nameFOR"}`}
         className={`bg-primary max-w-sm min-w-full mx-auto rounded text-secondary p-2 my-5 cursor-pointer ease-linear duration-300 hover:tracking-widest hover:ease-linear ${
