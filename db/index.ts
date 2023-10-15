@@ -25,8 +25,12 @@ export const menu: MenuType = [
 export const footerMenu: MenuType = [
   { name: "50KB Converter", path: "/" },
   {
-    name: "About Us",
+    name: "About",
     path: "/about",
+  },
+  {
+    name: "Blog",
+    path: "/blog",
   },
   {
     name: "Terms and Conditions",
@@ -34,7 +38,7 @@ export const footerMenu: MenuType = [
   },
 
   {
-    name: "Privacy Policy",
+    name: "Policy",
     path: "/privacy",
   },
 
