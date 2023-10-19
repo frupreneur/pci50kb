@@ -81,7 +81,7 @@ export default function ImageUpload() {
     <>
       <div className="flex justify-center gap-2 items-center my-2">
         <p className="">
-          Convert To: <span className="text-primary">{`<=`}</span>
+          Convert To: <span className="text-primary">{`=>`}</span>
         </p>
         <label htmlFor="react-select-select-box-input">
           <Select
